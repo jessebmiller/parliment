@@ -1,9 +1,9 @@
 package format
 
 import (
-	"fmt"
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"log"
 )
 
@@ -44,10 +44,10 @@ func (r SimpleJsonResult) Format() []byte {
 		types = append(types, columnType.DatabaseTypeName())
 	}
 
-	result := struct{
+	result := struct {
 		columns []string
-		types []string
-		rows [][]string
+		types   []string
+		rows    [][]string
 	}{
 		columns,
 		types,

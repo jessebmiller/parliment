@@ -27,4 +27,4 @@ build:
 .PHONY: start
 start: build
 	-docker stop $(NAME)
-	docker run --name $(NAME) -p 8080:8080 $(LOCAL_BUILD_TAG)
+	docker run --rm --name $(NAME) -p 8080:8080 $(LOCAL_BUILD_TAG)
